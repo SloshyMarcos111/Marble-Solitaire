@@ -2,10 +2,13 @@ package cs3500.marblesolitaire;
 
 import static java.lang.Integer.parseInt;
 
+import cs3500.marblesolitaire.controller.MarbleSolitaireController;
+import cs3500.marblesolitaire.controller.MarbleSolitaireControllerImpl;
 import cs3500.marblesolitaire.model.hw02.MarbleSolitaireModel;
 import cs3500.marblesolitaire.model.hw02.MarbleSolitaireModelImpl;
 import cs3500.marblesolitaire.model.hw04.EuropeanSolitaireModelImpl;
 import cs3500.marblesolitaire.model.hw04.TriangleSolitaireModelImpl;
+import java.io.InputStreamReader;
 
 /**
  * Allows for commandline implementation. Takes in arguments for the 3 types of boards and their
@@ -115,6 +118,7 @@ public final class MarbleSolitaire {
         System.out.println("Invalid entry.");
     }
 
-    System.out.println(m.getGameState());
+    new MarbleSolitaireControllerImpl(new InputStreamReader(System.in),
+        System.out).playGame(m);
   }
 }

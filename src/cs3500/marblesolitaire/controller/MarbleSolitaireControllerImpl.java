@@ -50,13 +50,6 @@ public class MarbleSolitaireControllerImpl implements MarbleSolitaireController 
     int toRowInt;
     int toColInt;
 
-    /*try {
-      this.out.append(m.getGameState() + "\n");
-      this.out.append("Score: " + m.getScore() + "\n" + "Enter the current row and column of the "
-          + "marble you want to move and the row and column you want to move it to.\n");
-    } catch (IOException ioe) {
-      throw new IllegalStateException("Append failed", ioe);
-    }*/
     appendHelper(m.getGameState() + "\n" + "Score: " + m.getScore() + "\n"
         + "Enter the current row and column of the " + "marble you want to move and the row and "
         + "column you want to move it to.");
